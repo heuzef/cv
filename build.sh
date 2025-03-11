@@ -1,3 +1,3 @@
 #!/bin/sh
 IMAGE=jankapunkt/latexcv:1.0
-exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data "$IMAGE" pdflatex --output-directory=fr fr/heuzef_cv_fr.tex
+exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data "$IMAGE" pdflatex --output-directory=$1 $1/heuzef_cv.tex

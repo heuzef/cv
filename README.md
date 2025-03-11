@@ -24,6 +24,7 @@ $ git clone git@github.com:heuzef/cv.git && cd cv
 # Create image container
 $ ./create_image.sh
 
-# Then, run it to build PDF :
-$ .docker/build.sh
+# Then, run to build PDF :
+$ .docker/build.sh fr
+$ .docker/build.sh en
 ```

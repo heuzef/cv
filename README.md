@@ -1,27 +1,29 @@
 # Heuzef resume
 
-This is my resume writed in LaTeX, it use the [AltaCV][l_alta] template.
+This is my resume writed in LaTeX, it use AltaCV template : https://github.com/liantze/AltaCV
 
-You need  installed on your system or Docker en
+You need Texlive installed on your system or Docker to build with Latex environment. 
 
 ## Build Procedure
 
-It use Texlive to build Latex environment. For this you need to have "texlive-core texlive-bibtexextra texlive-latexextra texlive-fontsextra" or Docker installed on your system.
+For this you need to have "texlive-core texlive-bibtexextra texlive-latexextra texlive-fontsextra" or Docker installed on your system.
 
 > Get Docker: https://docs.docker.com/get-docker/
 
-Provide scripts for building the image and running the containers, 
-so you should fine by simply running the script:
+I use scripts for building the image and running the containers, this has originally been implemented by https://github.com/blang/latex-docker/.
+
+So you should fine by simply running the script:
 
 ```shell
+# Start Docker
 $ service docker start
-$ git clone git@github.com:heuzef/cv.git && cd cv
-$ ./create_image.sh
-```
 
-Then, for build PDF :
-```shell
+# Clone the repo and move into
+$ git clone git@github.com:heuzef/cv.git && cd cv
+
+# Create image container
+$ ./create_image.sh
+
+# Then, run it to build PDF :
 $ .docker/build.sh
 ```
-
-This has originally been implemented by https://github.com/blang/latex-docker/tree/master

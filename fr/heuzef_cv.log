@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.5)  11 MAR 2025 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.5)  13 MAR 2025 15:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,8 +831,7 @@ File: T1lato-TLF.fd 2019/06/24 Font definitions for T1/lato-TLF.
 )
 LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 56.
-
-No file heuzef_cv.aux.
+ (fr/heuzef_cv.aux)
 \openout1 = `heuzef_cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -891,6 +890,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 56.
 LaTeX Info: Redefining \pageref on input line 56.
 LaTeX Info: Redefining \nameref on input line 56.
+
+(fr/heuzef_cv.out) (fr/heuzef_cv.out)
 \@outlinefile=\write5
 \openout5 = `heuzef_cv.out'.
 
@@ -1107,7 +1108,7 @@ e.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 305--306
- []\T1/lato-TLF/m/it/10 Dernière mise à jour March 11, 2025[]
+ []\T1/lato-TLF/m/it/10 Dernière mise à jour March 13, 2025[]
  []
 
 
@@ -1115,19 +1116,13 @@ Overfull \vbox (12.25398pt too high) has occurred while \output is active []
 
 
 [2 <fr/heuzef_2025_02.jpg>] (fr/heuzef_cv.aux)
-
-Package rerunfilecheck Warning: File `heuzef_cv.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `heuzef_cv.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `heuzef_cv.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32772 strings out of 480247
- 642307 string characters out of 5896152
- 952180 words of memory out of 5000000
+ 32778 strings out of 480247
+ 642403 string characters out of 5896152
+ 952122 words of memory out of 5000000
  50123 multiletter control sequences out of 15000+600000
  786250 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1146,7 +1141,7 @@ public/fontawesome5/FontAwesome5Free-Regular.pfb></usr/share/texlive/texmf-dist
 /texmf-dist/fonts/type1/typoland/lato/Lato-Bold.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/typoland/lato/Lato-Italic.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/typoland/lato/Lato-Regular.pfb>
-Output written on fr/heuzef_cv.pdf (2 pages, 8081786 bytes).
+Output written on fr/heuzef_cv.pdf (2 pages, 8082183 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  3 named destinations out of 1000 (max. 500000)

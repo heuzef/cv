@@ -22,9 +22,9 @@ $ service docker start
 $ git clone git@github.com:heuzef/cv.git && cd cv
 
 # Create image container
-$ ./create_image.sh
+$ sh create_image.sh
 
 # Then, run to build PDF :
-$ .docker/build.sh fr
-$ .docker/build.sh en
+$ sh build.sh fr
+$ sh build.sh en
 ```

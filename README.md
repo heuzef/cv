@@ -22,7 +22,10 @@ $ service docker start
 $ git clone git@github.com:heuzef/cv.git && cd cv
 
 # Create image container
-$ sh create_image.sh
+$ docker build -t jankapunkt/latexcv:1.0 .
+
+# Install Ghostscript (for PDF compression)
+$ dnf install ghostscript
 
 # Then, run to build PDF :
 $ sh build.sh fr

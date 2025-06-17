@@ -1,0 +1,280 @@
+% Icons : https://ctan.tetaneutral.net/fonts/fontawesome5/doc/fontawesome5.pdf
+% Use the "normalphoto" option for a normal photo instead of cropped to a circle
+%\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[10pt,a4paper,ragged2e,withhyper,normalphoto]{altacv}
+
+% Layout
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Fonts
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Colours
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{Carmine}{HTML}{960018}
+\definecolor{EngineeringOrange}{HTML}{C80815}
+\definecolor{GoldenMetallic}{HTML}{D4AF37}
+\definecolor{Flax}{HTML}{EEDC82}
+\definecolor{OldLace}{HTML}{FDF5E6}
+\definecolor{DodgerBlue}{HTML}{1E90FF}
+\definecolor{EgyptianBlue}{HTML}{0033AA}
+\definecolor{ForestGreen}{HTML}{228B22}
+
+\colorlet{name}{EgyptianBlue}
+\colorlet{tagline}{DodgerBlue}
+\colorlet{heading}{DodgerBlue}
+\colorlet{headingrule}{SlateGrey}
+\colorlet{subheading}{SlateGrey}
+\colorlet{accent}{SlateGrey}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% for the date/location for \cvevent
+\renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+\renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+% Infos
+\begin{document}
+
+\name{Heuze Florent}
+\tagline{IT Project Manager}
+\photoL{6cm}{heuzef_2025_01}
+%\photoL{4cm}{heuzef_2025_portrait_min}
+
+\personalinfo{
+  \printinfo{\faCalendar}{1990}
+  \location{Bordeaux, France}
+  \email{contact@heuzef.com}
+  \phone{+33(0)6 31 32 66 54}
+  \homepage{heuzef.com}
+  \linkedin{heuzef}
+  %\github{heuzef}
+}
+
+\makecvheader
+
+\cvsection{About me}
+
+\begin{quote}
+``With 15 years of experience in IT, I am transitioning into the role of IT Project Manager, driven by a passion for managing large-scale technology projects and fostering digital transformation. My background includes significant experience in project management, IT infrastructure, and team leadership.
+
+I am adept at planning, organizing, and monitoring budgets, deadlines, risks, and quality. My ability to promote synergy between IT, business, and external partners, along with my strong communication skills, ensures effective stakeholder communication and project success.
+
+Throughout my career, I have successfully implemented methodological best practices, managed change, and guaranteed end-user satisfaction. My proactive approach to risk management and data analysis contributes to informed decision-making and continuous improvement.''
+\end{quote}
+
+\bigskip
+
+\columnratio{0.55}
+
+\begin{paracol}{2}
+
+\cvsection{Approvals}
+
+\cvachievement{\faGraduationCap}{Machine Learning Engineer}{Datascientest, RNCP 36129 Level 7, 2025}
+
+\cvachievement{\faGraduationCap}{IT Maintenance and Support Manager}{CESI, RNCP 34602 Level 5, 2015}
+
+\cvachievement{\faGraduationCap}{IT Technician Resource Manager}{Site-Informatique, RNCP5918 Level 5, 2013}
+
+\cvachievement{\faGraduationCap}{Information and Communication Technology Advisor and Assistant}{AFPA, RNCP4537 Level 4, 2011}
+
+\divider
+
+\cvachievement{\faCertificate}{AWS Certified Cloud Practitioner}{AWS, 2025}
+
+\cvachievement{\faCertificate}{OpenCV Bootcamp}{OpenCV University, 2024}
+
+\cvachievement{\faCertificate}{Chinese A1}{CCI Cognac (Lilate), 2023}
+
+\cvachievement{\faCertificate}{CCNA1}{CISCO, 2013}
+
+\cvachievement{\faCertificate}{Graphic Designer}{Lignes et Formations, 2011}
+
+\cvachievement{\faCertificate}{PSC1}{Croix-Rouge, 2005/2008/2012/2022}
+
+\cvsection{Languages}
+
+\cvachievement{\faFlag}{French}{Native}
+
+\divider
+
+\cvachievement{\faFlag}{English}{B2}
+
+\divider
+
+\cvachievement{\faFlag}{Chinese}{A1}
+
+\switchcolumn
+
+\cvsection{Skills}
+
+\cvtag{Project Management {\color{GoldenMetallic}\faCogs}}\\
+\cvtag{Budgeting {\color{EngineeringOrange}\faDollarSign}}
+\cvtag{Risk Management {\color{Carmine}\faExclamationTriangle}}\\
+\cvtag{Communication {\color{EgyptianBlue}\faComments}}
+\cvtag{Stakeholder Management {\color{ForestGreen}\faUsers}}
+\\
+\divider
+
+\cvtag{Agile/Scrum {\color{black}\faTasks}}
+\cvtag{Jira/Kanban {\color{GoldenMetallic}\faKanban}}
+\cvtag{IT Infrastructure {\color{GoldenMetallic}\faServer}}\\
+\cvtag{Data Analysis {\color{ForestGreen}\faChartBar}}
+\cvtag{Reporting {\color{cyan}\faFileAlt}}
+\\
+\divider
+
+\cvtag{Change Management {\color{black}\faSync}}
+\cvtag{End-User Satisfaction {\color{SlateGrey}\faSmile}}
+\cvtag{Continuous Improvement {\color{GoldenMetallic}\faCog}}
+\\
+\divider
+
+\cvtag{TCP/IP networks {\color{black}\faNetworkWired}}
+\cvtag{Hypervision {\color{EngineeringOrange}\faServer}}\\
+\cvtag{IaC {\color{black}\faCode}}
+\cvtag{Security {\color{EgyptianBlue}\faShield*}}
+\cvtag{Supervision {\color{Carmine}\faEye}}
+\\
+\divider
+
+\cvtag{Infographic {\color{black}\faPalette}}
+\cvtag{PAO {\color{Flax}\faPrint}}
+\cvtag{CAO {\color{EngineeringOrange}\faCube}}
+\cvtag{DAO {\color{SlateGrey}\faPencilRuler}}
+\\
+\divider
+
+\cvtag{Web {\color{black}\faGlobe}}
+\cvtag{Dev {\color{EngineeringOrange}\faHtml5}}
+\cvtag{CMS {\color{DodgerBlue}\faWordpress}}
+\cvtag{SSG {\color{Flax}\faSitemap}}
+\\
+\divider
+
+\cvtag{Cloud {\color{black}\faCloud}}
+\cvtag{AWS {\color{EngineeringOrange}\faAws}}
+\\
+\divider
+
+\end{paracol}
+
+\newpage
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{heuzef_2025_02.jpg}
+\end{figure}
+
+\cvsection{Experiences}
+
+\columnratio{0.5}
+\begin{paracol}{2}
+
+\cvevent{Senior IT Technician}{Firewall-Services}{2013 -- 2023}{Remote}
+\begin{itemize}
+\item Managed and coordinated multiple IT projects, ensuring timely delivery and budget adherence.
+\item Led steering committees and ensured effective communication with all stakeholders.
+\item Defined and monitored key performance indicators (KPIs).
+\item Implemented Agile and Scrum methodologies for project management.
+\item Oversaw change management and guaranteed end-user satisfaction.
+\item Supervised IT infrastructures and ensured continuous optimization of internal procedures.
+\item Conducted functional analysis of needs and RCA analyses.
+\item Provided support for teams and resolved crisis and emergency situations.
+\end{itemize}
+
+\divider
+
+\cvevent{Freelance}{Heuzef}{2012 -- 2016}{Remote}
+\begin{itemize}
+\item Managed IT services, web development, and graphic design projects.
+\item Ensured client satisfaction through effective project management and communication.
+\end{itemize}
+
+\divider
+
+\cvevent{CEMÉA Aquitaine}{IT Technician}{2011 -- 2011}{Remote}
+\begin{itemize}
+\item Managed IT projects in an educational setting.
+\item Provided andragogical assistance and training.
+\end{itemize}
+
+\switchcolumn
+
+\cvevent{City hall of Bordeaux}{Animator}{2011 -- 2011}{Bordeaux}
+\begin{itemize}
+\item Senior facilitator at "Atelier informatique".
+\end{itemize}
+
+\divider
+
+\cvevent{Docteur ordinateur}{IT Technician}{2011 -- 2011}{Bordeaux}
+\begin{itemize}
+\item Managed computer repairs and workshop repairs.
+\end{itemize}
+
+\divider
+
+\cvevent{Groupe Aquitem}{Graphic Designer}{2011 -- 2011}{Bordeaux}
+\begin{itemize}
+\item Managed graphic design, DTP, and web projects.
+\end{itemize}
+
+\divider
+
+\cvevent{Viacarta}{Graphic Designer}{2011 -- 2011}{Bordeaux}
+\begin{itemize}
+\item Assistant printer in the graphics chain.
+\end{itemize}
+
+\divider
+
+\cvevent{Divers}{}{2006 -- 2009}{Lot-et-Garonne}
+\begin{itemize}
+\item Various small jobs.
+\end{itemize}
+
+\end{paracol}
+
+\cvsection{Interests}
+
+\columnratio{0.5}
+\begin{paracol}{2}
+
+\begin{itemize}
+\item Aïkidoka (martial art)
+\item FabLab-Manager
+\item Handyman
+\switchcolumn
+\item Self-hoster
+\item Computer libertarian
+\item Family
+\end{itemize}
+
+\end{paracol}
+
+\bigskip
+
+\raggedleft
+{\textit{Last update \today}}\github{heuzef/cv}
+\end{document}

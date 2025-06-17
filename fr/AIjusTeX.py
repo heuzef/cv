@@ -12,7 +12,7 @@ import os
 import re
 from mistralai import Mistral
 from dotenv import load_dotenv
-load_dotenv('fr/.env')
+load_dotenv('.env')
 
 api_key = os.getenv("MISTRAL_API_KEY")
 model = "mistral-large-latest"

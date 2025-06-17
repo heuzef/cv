@@ -12,7 +12,7 @@ import os
 import re
 from mistralai import Mistral
 from dotenv import load_dotenv
-load_dotenv('fr/.env')
+load_dotenv('../.env')
 
 api_key = os.getenv("MISTRAL_API_KEY")
 model = "mistral-large-latest"
@@ -25,7 +25,7 @@ def extract_latex(texte):
     if match:
         return match.group(1).strip()
     else:
-        return "Aucun bloc de code LaTeX trouvé."
+        return "No LaTeX code blocks found."
 
 def lechat_mistral(pre_prompt, cv_path, job_path):
     client = Mistral(api_key=api_key)
@@ -45,15 +45,15 @@ def lechat_mistral(pre_prompt, cv_path, job_path):
             },
             {
                 "role": "user",
-                "content": "Voici le CV en LaTex à adapter : " + code_content,
+                "content": "Here is the LaTex CV to adapt: " + code_content,
             },
         ]
     )
 
     return extract_latex(chat_response.choices[0].message.content)
 
-pre_prompt = "En tant qu'assistant d'aide à la rédaction d'un Curriculum Vitae. Votre tâche est d'analyser le CV en LaTex fourni pour adapter son code à l'offre d'emploi suivante : "
+pre_prompt = "As a Curriculum Vitae assistant. Your task is to analyse the LaTex CV provided to adapt its code to the following job offer: "
 
-response = lechat_mistral(pre_prompt, "fr/heuzef_cv.tex", "fr/job.txt")
+response = lechat_mistral(pre_prompt, "en/heuzef_cv.tex", "en/job.txt")
 
 print(response)

@@ -31,3 +31,16 @@ $ dnf install ghostscript
 $ sh build.sh fr
 $ sh build.sh en
 ```
+
+To use AIjustTeX tool (work with Mistral by the way):
+
+```shell
+# Setup your API Key
+$ echo "MISTRAL_API_KEY=<API_KEY>" > .env
+
+# Paste the job offer in the <language>/job.txt
+# Then, run to build your custom PDF :
+$ sh build_AIjustTeX.sh fr
+$ sh build_AIjustTeX.sh en
+# Wait a minute and check the result in "_custom" files.
+```

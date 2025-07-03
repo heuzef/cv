@@ -5,18 +5,18 @@
 # AjustiCVTeX leverages advanced AI to adapt your existing CV to better fit specific job offers, 
 # ensuring your application stands out without altering its core integrity.
 # Licence : Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-# Requirement : pip install mistralai dotenv
+# Requirement : pip install -U langchain-mistralai
+# To use, install the requirements, and configure your environment.
+# export MISTRAL_API_KEY=your-api-key
+
 ########################################################################################################################
 
 import os
 import re
-from mistralai import Mistral
-from dotenv import load_dotenv
-load_dotenv('.env')
+from langchain_core.messages import HumanMessage
+from langchain_mistralai.chat_models import ChatMistralAI
 
-api_key = os.getenv("MISTRAL_API_KEY")
-model = "mistral-large-latest"
-client = Mistral(api_key=api_key)
+chat = ChatMistralAI(model="mistral-large-latest")
 
 def extract_latex(texte):
     pattern = r"```latex(.*?)```"
@@ -25,10 +25,9 @@ def extract_latex(texte):
     if match:
         return match.group(1).strip()
     else:
-        return "No LaTeX code blocks found."
+        return "No LaTeX code found."
 
 def lechat_mistral(pre_prompt, cv_path, job_path):
-    client = Mistral(api_key=api_key)
 
     with open(cv_path, 'r') as file:
         code_content = file.read()
@@ -36,24 +35,10 @@ def lechat_mistral(pre_prompt, cv_path, job_path):
     with open(job_path, 'r') as file:
         job_content = file.read()
 
-    chat_response = client.chat.complete(
-        model=model,
-        messages=[
-            {
-                "role": "system",
-                "content": pre_prompt + job_content,
-            },
-            {
-                "role": "user",
-                "content": "Here is the LaTex CV to adapt: " + code_content,
-            },
-        ]
-    )
+    messages = [HumanMessage(content=pre_prompt + job_content + "Here is the Latex CV to adapt: " + code_content)]
 
-    return extract_latex(chat_response.choices[0].message.content)
+    return print(chat.invoke(messages).content)
 
-pre_prompt = "As a Curriculum Vitae assistant. Your task is to analyse the LaTex CV provided to adapt its code to the following job offer: "
+pre_prompt = "As a CV writing assistant, your task is to analyze the provided LaTex CV to adapt its code to the following job offer: "
 
-response = lechat_mistral(pre_prompt, "en/heuzef_cv.tex", "en/job.txt")
-
-print(response)
+extract_latex(lechat_mistral(pre_prompt, "en/heuzef_cv.tex", "en/job.txt"))

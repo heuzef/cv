@@ -1,6 +1,6 @@
 #!/bin/sh
 IMAGE=jankapunkt/latexcv:1.0
-CV_FILE_NAME=heuzef_cv_custom
+CV_FILE_NAME=heuzef_cv_AIjusTeX
 
 python3 $1/AIjusTeX.py > $1/"$CV_FILE_NAME".tex
 

@@ -18,15 +18,6 @@ from langchain_mistralai.chat_models import ChatMistralAI
 
 chat = ChatMistralAI(model="mistral-large-latest")
 
-def extract_latex(texte):
-    pattern = r"```latex(.*?)```"
-    match = re.search(pattern, texte, re.DOTALL)
-
-    if match:
-        return match.group(1).strip()
-    else:
-        return "Aucun bloc de code LaTeX trouvé."
-
 def lechat_mistral(pre_prompt, cv_path, job_path):
 
     with open(cv_path, 'r') as file:
@@ -41,4 +32,4 @@ def lechat_mistral(pre_prompt, cv_path, job_path):
 
 pre_prompt = "En tant qu'assistant d'aide à la rédaction d'un Curriculum Vitae. Votre tâche est d'analyser le CV en LaTex fourni pour adapter son code à l'offre d'emploi suivante : "
 
-extract_latex(lechat_mistral(pre_prompt, "fr/heuzef_cv.tex", "fr/job.txt"))
+lechat_mistral(pre_prompt, "fr/heuzef_cv.tex", "fr/job.txt")

@@ -36,7 +36,7 @@ To use AIjustTeX tool (work with Mistral by the way):
 
 ```shell
 # Setup your API Key
-$ echo "MISTRAL_API_KEY=<API_KEY>" > .env
+$ export MISTRAL_API_KEY=your-api-key
 
 # Paste the job offer in the <language>/job.txt
 # Then, run to build your custom PDF :

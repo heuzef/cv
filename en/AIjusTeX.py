@@ -26,10 +26,10 @@ def lechat_mistral(pre_prompt, cv_path, job_path):
     with open(job_path, 'r') as file:
         job_content = file.read()
 
-    messages = [HumanMessage(content=pre_prompt + job_content + "Voici le CV en LaTex à adapter : " + code_content)]
+    messages = [HumanMessage(content=pre_prompt + job_content + "Here is the Latex CV to adapt: " + code_content)]
 
     return print(chat.invoke(messages).content)
 
-pre_prompt = "En tant qu'assistant d'aide à la rédaction d'un Curriculum Vitae. Votre tâche est d'analyser le CV en LaTex fourni pour adapter son code à l'offre d'emploi suivante : "
+pre_prompt = "As a CV writing assistant, your task is to analyze the provided LaTex CV to adapt its code to the following job offer:"
 
-lechat_mistral(pre_prompt, "fr/heuzef_cv.tex", "fr/job.txt")
+lechat_mistral(pre_prompt, "en/heuzef_cv.tex", "en/job.txt")

@@ -3,6 +3,16 @@
 %\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 \documentclass[10pt,a4paper,ragged2e,withhyper,normalphoto]{altacv}
 
+% Overwrite AtlaCV
+\renewcommand{\cvsectionfont}{\bfseries}
+
+\newcommand{\cvcertificate}[3]{%
+  \noindent\makebox[3em][l]{\Large\color{accent}\BeginAccSupp{method=escape,ActualText={#1: }}#1\EndAccSupp{}}%
+  \bfseries\textcolor{emphasis}{#2}~\normalfont#3%
+  \\
+  \smallskip%
+}
+
 % Layout
 \geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
 
@@ -35,9 +45,13 @@
 \definecolor{EgyptianBlue}{HTML}{0033AA}
 \definecolor{ForestGreen}{HTML}{228B22}
 
-\colorlet{name}{EgyptianBlue}
-\colorlet{tagline}{DodgerBlue}
-\colorlet{heading}{DodgerBlue}
+\definecolor{SafranBlue}{HTML}{003399}  % Couleur Safran
+\definecolor{DataBlue}{HTML}{0066CC}
+\definecolor{CloudGrey}{HTML}{A0A0A0}
+
+\colorlet{name}{SafranBlue}
+\colorlet{tagline}{DataBlue}
+\colorlet{heading}{SafranBlue}
 \colorlet{headingrule}{SlateGrey}
 \colorlet{subheading}{SlateGrey}
 \colorlet{accent}{SlateGrey}
@@ -56,12 +70,13 @@
 \begin{document}
 
 \name{Heuze Florent}
-\tagline{Data and AI Project Manager}
+\tagline{Data and AI Project Manager Engineer (Full-Stack)}
+
 \photoL{7cm}{heuzef_2025_04}
 
 \personalinfo{
   % \printinfo{\faCalendar}{1990}
-  \phone{06 31 32 66 54}
+  \phone{(+33)631-326-654}
   \email{contact@heuzef.com}
   \\
   \linkedin{heuzef}
@@ -69,117 +84,121 @@
   \location{Bordeaux, France}
   %\github{heuzef}
   \\ \bigskip
-  \faFlag{French (Native)}
-  \faFlag{English (B2)}
-  \faFlag{Chinese (A1)}
+  \faFlag{Français (Native)}
+  \faFlag{Anglais (Fluent)}
+  \faFlag{Chinois (Beginner)}
 }
 
 \makecvheader
 
-\cvsection{About me}
+\cvsection{Profile}
 \begin{quote}
 ``
-Throughout my career, I have often played a guiding role, helping to structure and organize projects.
-
-My ability to play a facilitator role between different experts allows me to create a common language and optimize collaboration, thus contributing to the achievement of ambitious and innovative objectives.
-''
+Versatile engineer with over 10 years of experience in infrastructure management and technical support, refocused on Data and AI. Certified Data Scientist and MLOps.
+I combine technical expertise and project management to design and deploy complete data solutions (MLOps, cloud, DevOps, security, ...). \\
+Passionate about open-source innovation, I help manage projects end-to-end by acting as a \\
+facilitator between different experts.''
 \end{quote}
 
 \bigskip
 \columnratio{0.5}
 \begin{paracol}{2}
 
-\cvsection{Approvals}
-\cvachievement{\faGraduationCap}{Machine Learning Engineer}{Datascientest, RNCP 36129 Level 7, 2025\linebreak
-(Datascientist, MLOps, Data Product Manager)}
-\cvachievement{\faGraduationCap}{IT Maintenance and Support Manager}{CESI, RNCP 34602 Level 5, 2015}
-\cvachievement{\faGraduationCap}{IT Technician Resource Manager}{Site-Informatique, RNCP5918 Level 5, 2013}
-\cvachievement{\faGraduationCap}{IT Communication Advisor}{AFPA, RNCP4537 Level 4, 2011}
+\cvsection{Education}
+\cvachievement{\faCaretRight}{Machine Learning Engineer}{Datascientest/Mines Paris, RNCP 36129 Level 7, 2025.\linebreak
+DataScientist/MLOps/Data Product Manager}
+\cvachievement{\faCaretRight}{IT Maintenance and Support Manager}{CESI, RNCP 34602 Level 5, 2015}
+\cvachievement{\faCaretRight}{IT Technician Resource Manager}{Site-Informatique, RNCP5918 Level 5, 2013}
+\cvachievement{\faCaretRight}{IT Communication Advisor}{AFPA, RNCP4537 Level 4, 2011}
 
-\divider
-
-\cvachievement{\faCertificate}{Dataiku MLOps Practitioner Certificate}{Dataiku, 2025}
-\cvachievement{\faCertificate}{AWS Certified Cloud Practitioner}{AWS, 2025}
-\cvachievement{\faCertificate}{OpenCV Bootcamp}{OpenCV University, 2024}
-\cvachievement{\faCertificate}{Chinese A1}{CCI Cognac, 2023}
-\cvachievement{\faCertificate}{CISCO CCNA1}{CISCO, 2013}
-\cvachievement{\faCertificate}{Graphic Designer}{Lignes et Formations, 2011}
+\cvsection{Certifications}
+{\faCaretRight}{Dataiku MLOps Practitioner Certificate}{ - 2025}\\
+{\faCaretRight}{AWS Certified Cloud Practitioner}{ - 2025}\\
+{\faCaretRight}{OpenCV University Bootcamp}{ - 2024}\\
+%{\faCaretRight}{Chinois A1}{ - 2023}\\
+{\faCaretRight}{CISCO CCNA1}{ - 2013}\\
+%{\faCaretRight}{Designer Graphiste Lignes et Formations}{ - 2011}\\
 
 \cvsection{Skills}
-
 \cvtag{Autonomous {\color{SlateGrey}\faDove}}
 \cvtag{Motivator {\color{SlateGrey}\faBullhorn}}
 \cvtag{Resilient {\color{SlateGrey}\faTree}}\\
 \cvtag{Operational Excellence {\color{SlateGrey}\faCogs}}
-\cvtag{Multidisciplinary {\color{SlateGrey}\faHandshake}}\\
+\cvtag{Multidisciplinary {\color{SlateGrey}\faHandshake}}
+\\
 \divider
+\bigskip
 
-\cvtag{Python {\color{SlateGrey}\faPython}}
 \cvtag{MLOps {\color{SlateGrey}\faSync*}}
 \cvtag{ML/DL/LLM {\color{SlateGrey}\faBrain}}
-\\
+\cvtag{Python {\color{SlateGrey}\faPython}}
+
+\bigskip
+
 \cvtag{(No)SQL) {\color{SlateGrey}\faDatabase}}
 \cvtag{ETL {\color{SlateGrey}\faFileDownload}}
-\cvtag{Scraping / API / MCP {\color{SlateGrey}\faPlug}}
+\cvtag{API / MCP / Scraping {\color{SlateGrey}\faPlug}}
 \cvtag{Data Viz (PowerBI, Looker Studio, Python libs){\color{SlateGrey}\faChartPie}}
-\\
-\cvtag{RGPD {\color{SlateGrey}\faGlobeEurope}}
-\cvtag{AI Act {\color{SlateGrey}\faBalanceScale}}
-\cvtag{Security {\color{SlateGrey}\faShield*}}
-\\
-\cvtag{TCP/IP Network {\color{SlateGrey}\faNetworkWired}}
-\cvtag{Hypervision {\color{SlateGrey}\faServer}}
-\cvtag{Supervision {\color{SlateGrey}\faEye}}
-\\
+
 \cvtag{Conteneurization {\color{SlateGrey}\faDocker}}
 \cvtag{Orchestration {\color{SlateGrey}\faBoxes}}
-\\
+
+\bigskip
+
 \cvtag{Git {\color{SlateGrey}\faCodeBranch}}
 \cvtag{IaC {\color{SlateGrey}\faCode}}
 \cvtag{Cloud {\color{SlateGrey}\faCloud}}
-\cvtag{Infographic {\color{SlateGrey}\faPalette}}
+
+\cvtag{GDPR {\color{SlateGrey}\faGlobeEurope}}
+\cvtag{Compliance {\color{SlateGrey}\faBalanceScale}}
+\cvtag{Security {\color{SlateGrey}\faShield*}}
+
+\bigskip
+
+\cvtag{TCP/IP Network {\color{SlateGrey}\faNetworkWired}}
+\cvtag{Hypervision {\color{SlateGrey}\faServer}}
+\cvtag{Supervision {\color{SlateGrey}\faEye}}
+
+\textit{Interests:}\\
+{\faUserNinja} Aïkido {\faServer} Self-hosted {\faLinux} Free Software\\
 
 \switchcolumn
 
-\cvsection{Works}
-\cvevent{Senior IT Technician}{Firewall-Services}{2013 -- 2023}{Remote}
+\cvsection{Work Experiences}
+\cvevent{Senior IT Technician - Firewall-Services}{}{2013 -- 2023}{Remote}
 \begin{itemize}
 \item Digital service company (security and free software).
-\item Maintenance of around ten companies.
-\item Maintenance in server rooms and RRZ.
-\item Proactive assistance and training for customers.
-\item Supervision of IT infrastructures.
-\item Writing of reports and technical documentation.
-\item Continuous optimization of internal procedures.
-\item Functional analysis of needs and RCA analyses.
-\item Support for teams.
-\item Resolution of crisis and emergency situations.
+\item Administration and supervision of IT infrastructures.
+\item IT Management of around ten companies.
+\item Server room and ZRR maintenance.
+\item Proactive client training.
+\item Technical documentation writing.
+\item Backup monitoring and optimization.
+\item Sensitive data security.
+\item Functional needs analysis and RCA.
+\item Agile team management.
+\item Crisis and emergency situation resolution.
 \end{itemize}
 \divider
 \cvevent{Freelance}{}{2012 -- 2016}{Remote}
-\begin{itemize}
-\item Services IT. Développement web et graphisme.
-\item IT services. Web development and graphic.
-\end{itemize}
 \divider
 \cvevent{IT Manager - CEMÉA Aquitaine}{}{2011}{Remote}
-\begin{itemize}
-\item Technician facilitator (patriotic contract).
-\end{itemize}
 
-\cvsection{Projects}
-{\faRobot}{Caligraphomate inventor (HACK1ROBO 2025)}\\
-{\faChartLine}{Improvement of the Cartofriches system for CEREMA}\\
-{\faCogs}{Implementation of an AI model (sports betting)}\\
-{\faEye}{CNN model design (recognition mushrooms)}\\
-{\faMedkit}{Parkinson's anti-stress shield (Dijon Datathon 2025)}\\
-{\faLightbulb}{Foundation of the Cognac Fab-Lab}\\
-{\faFlask}{Startup Weekend Bordeaux 2012, 2013, 2015, 2017}\\
-{\faHandHoldingHeart}{Creation of associations for inclusion/solidarity}
-
-\divider
-
-Interests : {\faUserNinja} Aïkido {\faServer} Self-hosted {\faLinux} Free Software\\
+\cvsection{Completed projects}
+{\faRobot}{Invention of an AI-driven robotic arm\\
+\textit{HACK1ROBO, 2025}}\\
+{\faChartLine}{Improvement of the Cartofriches platform for CEREMA}\\
+{\faCogs}{Implementation of an AI model}\\
+\textit{End-to-end MLOPS deployment for sports betting}\\
+{\faEye}{CNN model design}\\
+\textit{Mushroom recognition application}\\
+{\faMedkit}{AI-based medical detector design}\\
+\textit{Parkinson Stress Shield, Datathon Dijon 2025}\\
+{\faLightbulb}{Foundation of a FabLab}\\
+\textit{Cognhacker, in the city of Cognac}\\
+{\faFlask}{Startup Weekend Bordeaux}\\
+\textit{Winning projects from the 2012, 2013, and 2017 editions}\\
+%{\faHandHoldingHeart}{Creation of associations for inclusion/solidarity}
 
 \raggedleft
 \bigskip

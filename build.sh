@@ -4,7 +4,7 @@ CV_FILE_NAME=heuzef_cv
 
 echo "CV generation in progress ..."
 echo ""
-docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data "$IMAGE" pdflatex --output-directory=$1 $1/"$CV_FILE_NAME".tex
+docker run --rm -i --net=none -v "$PWD":/data "$IMAGE" pdflatex --output-directory=$1 $1/"$CV_FILE_NAME".tex
 
 echo "Create a compressed light weight copy"
 echo ""

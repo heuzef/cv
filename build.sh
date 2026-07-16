@@ -11,5 +11,3 @@ echo ""
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$1/"$CV_FILE_NAME".min.pdf $1/"$CV_FILE_NAME".pdf
 
 echo "DONE !"
-echo "-----"
-ls -lArth fr | grep "$CV_FILE_NAME"
